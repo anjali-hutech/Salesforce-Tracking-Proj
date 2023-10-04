@@ -1,0 +1,10 @@
+.THIS{
+      background-image: url('https://salesforceDomain/resource/"generatedID"/StaticResourceFile/img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.THIS .h1{
+     color: var(--slds-c-badge-text-color, #080707);
+}

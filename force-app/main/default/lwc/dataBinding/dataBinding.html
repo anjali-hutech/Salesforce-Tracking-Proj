@@ -1,0 +1,26 @@
+<template>
+   
+<!-- <div class="slds-m-around_large">
+    <lightning-input name="fname" label="Last Name" onchange={handleChange}></lightning-input>
+    <lightning-input name="lname" label="First Name" onchange={handleChange}></lightning-input>
+
+
+    <p class="slds-m-top_medium">Full Uppered case: {uppercasedFullName}</p>
+</div> -->
+
+
+<!-- <p> Hello : {greeting}</p>
+<lightning-input label="Name" value={greeting}></lightning-input>
+<br/>
+
+<lightning-button varient="brand"  label="Click Me" onclick={handleClick}></lightning-button> -->
+<lightning-card>
+<p> Hello : {firstName}   {lastName}</p>
+<lightning-input label="First Name" value={firstName} name="fname"></lightning-input>
+<lightning-input label="Last Name" value={lastName} name="lname"></lightning-input>
+
+<br/>
+
+<lightning-button varient="brand"  label="Click Me" onclick={handleClick}></lightning-button>
+</lightning-card>
+</template>

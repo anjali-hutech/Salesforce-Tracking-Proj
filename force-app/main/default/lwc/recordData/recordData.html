@@ -1,0 +1,7 @@
+<template>
+   <div class="main slds-p-around_medium"></div>
+   <template if:true={viewData} for:each={viewData} for:item="res">
+    <lightning-card key={res.Id} variant="Narrow" title={res.Name} icon-name="standard:contact"></lightning-card>
+   </template>
+
+</template>

@@ -1,0 +1,21 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	 <lightning:tabset selectedTabId="two">
+        <lightning:tab label="Item One" id="one">
+            <c:PatientForm></c:PatientForm>
+        </lightning:tab>
+        <lightning:tab label="Abount us" id="two">
+             <ul class="slds-list_vertical slds-has-block-links_space">
+  <li>
+    <a style="color:black" href="#">About us</a>
+  </li>
+  <li>
+    <a style="color:black" href="#">Our Team</a>
+  </li>
+  <li>
+    <a style="color:black" href="#">Career</a>
+  </li>
+</ul>
+
+        </lightning:tab>
+         </lightning:tabset>
+</aura:component>

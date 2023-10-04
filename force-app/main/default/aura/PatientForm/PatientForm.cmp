@@ -1,0 +1,102 @@
+<aura:component controller="CreateAccountRecords" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+
+     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+     <aura:attribute name="Blogrp" type="List"/>
+     <aura:attribute name="gende" type="List"/>
+     <aura:attribute name="speci" type="List"/>
+
+     <aura:attribute  name="error" type="String"  default=""/>
+
+         
+    <aura:attribute name="Pati" type="Patient__c" default="{sobjecttype:'Patient__c'}"></aura:attribute>
+   <div class="runs"> 
+     <div class=" slds-text-align_center  slds-text-heading_large ">
+    <p> <h1 style="color:white">Patient Appointment Registration Form</h1></p>
+     </div>
+       <!--  <div class="slds-align_absolute-center">
+      <aura:if isTrue="{! !empty(v.error)}">
+           <div class="slds-notify_toast slds-theme_error" role="status">
+           <div class="slds-notify__content">
+             {!v.error}  
+           </div>
+           </div>
+         </aura:if>
+         </div>-->
+    <h1 style="font-family:verdana;font-size:20px;color:white; text-align=center">Personal Information:</h1>
+    <div class="slds-grid slds-wrap slds-p-around_medium">
+   <div class="slds-col slds-size_3-of-12  slds-p-left_xx-large">
+      <lightning:input   name="Patient Name" label="First Name" placeholder="First Name" value="{!v.Pati.Name}" required="true" > </lightning:input>    
+      </div>
+      <div class="slds-col slds-size_3-of-12  slds-p-left_xx-large">
+      <lightning:input  name="Last Name" label="Last Name" placeholder="Last Name" value="{!v.Pati.Last_Name__c}" required="true" > </lightning:input>    
+      </div>
+  </div> 
+    <div class="slds-grid slds-wrap slds-p-around_medium">
+      <div class="slds-col slds-size_3-of-12 slds-p-left_xx-large">
+      <lightning:select  label="Blood Group" value="{!v.Pati.Blood_Group__c}">
+       <option value="--None--">--None--</option>
+      <aura:iteration items="{!v.Blogrp}" var="ac">
+      <option value="{!ac}">{!ac}</option>
+      </aura:iteration>
+      </lightning:select>
+      </div>
+      <div class="slds-col slds-size_3-of-12  slds-p-left_xx-large">
+      <lightning:input name="Age" label="Age" placeholder="Age" value="{!v.Pati.Age__c}" required="true" > </lightning:input>    
+      </div> 
+     </div>
+     <div class="slds-grid slds-wrap slds-p-around_medium">
+       <div class="slds-col slds-size_3-of-12  slds-p-left_xx-large">
+       <lightning:input name="Adhaar Number" label="Adhaar Number" placeholder="Adhaar" value="{!v.Pati.Adhaar_Number__c}" required="true"> </lightning:input>    
+       </div>  
+       <div class="slds-col slds-size_3-of-12  slds-p-left_xx-large">
+       <lightning:input name="Date of Birth" label="DOB" placeholder="Date of Birth" type="Date" value="{!v.Pati.DOB__c}" required="true" > </lightning:input>    
+       </div>  
+     </div>
+     <div class="slds-grid slds-wrap slds-p-around_medium">
+       <div class="slds-col slds-size_3-of-12  slds-p-left_xx-large">
+       <lightning:input name="Email" label="Email"  placeholder="example@gmail.com" type="Email" value="{!v.Pati.Email__c}"> </lightning:input>    
+       </div> 
+     
+       <div class="slds-col slds-size_3-of-12 slds-p-left_xx-large">
+       <lightning:select label="Gender"  value="{!v.Pati.Gender__c}">
+        <option value="--None--">--None--</option>
+       <aura:iteration items="{!v.gende}" var="ac">
+       <option value="{!ac}">{!ac}</option>
+       </aura:iteration>
+       </lightning:select>
+       </div>
+    </div>
+
+     <div class="slds-grid slds-wrap slds-p-around_medium">
+         <div class="slds-col slds-size_3-of-12  slds-p-left_xx-large">
+       <lightning:input name="Phone Number" label="Phone Number" placeholder="(000) 000 0000" type="Phone" value="{!v.Pati.Phone__c}" > </lightning:input>    
+       </div> 
+        <div class="slds-col slds-size_3-of-12  slds-p-left_xx-large">
+            <lightning:input name="Appointment Date" label="Date Of Appointment" type="Date" placeholder="Appointment Date"  value="{!v.Pati.Select_Appointment_Date__c}" required="true" > </lightning:input>    
+       </div>  
+     </div>
+        <div class="slds-grid slds-wrap slds-p-around_medium">
+            <div class="slds-col slds-size_3-of-12  slds-p-left_xx-large">
+       <lightning:input name="Height" label="Height" placeholder="Height"  value="{!v.Pati.Height__c}" > </lightning:input>    
+       </div> 
+        <div class="slds-col slds-size_3-of-12  slds-p-left_xx-large">
+       <lightning:input name="No Of Vists" label="No Of Visits" placeholder="Height" type="Number"  value="{!v.Pati.No_of_Vists__c}" > </lightning:input>    
+       </div>  
+       </div>
+        <div class="slds-grid slds-wrap slds-p-around_medium">
+       <div class="slds-col slds-size_3-of-12 slds-p-left_xx-large">
+       <lightning:select label="Specialization"  value="{!v.Pati.Specialization__c}">
+        <option value="--None--">--None--</option>
+       <aura:iteration items="{!v.speci}" var="ac">
+       <option value="{!ac}">{!ac}</option>
+       </aura:iteration>
+       </lightning:select>
+       </div>
+     </div>  
+
+    <div class="slds-col slds-size_2-of-2 slds-text-align_center">
+        <lightning:button variant="brand" label="save" title="save action" onclick="{!c.dosave}"/>            
+    </div>
+       </div>
+    
+</aura:component>

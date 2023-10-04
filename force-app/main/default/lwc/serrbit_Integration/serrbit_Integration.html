@@ -1,0 +1,10 @@
+<template>
+    <!-- Input fields for payment-related information -->
+    <lightning-input label="Amount" type="number" value={amount} onchange={handleAmountChange}></lightning-input>
+    <lightning-input label="Customer Name" value={customerName} onchange={handleCustomerNameChange}></lightning-input>
+    <lightning-input label="Customer Email" type="email" value={customerEmail} onchange={handleCustomerEmailChange}></lightning-input>
+
+    <!-- Add more input fields as needed -->
+
+    <lightning-button label="Make Payment" onclick={initiatePayment} variant="brand"></lightning-button>
+</template>

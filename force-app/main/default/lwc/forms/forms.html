@@ -1,0 +1,24 @@
+<template>
+    <div class="slds-col">
+    <div class="slds-grid slds-grid_vertical">
+    <div class="slds-col slds-size_10-of-12">
+    <lightning-input varient="standard" name="name" label="Name" onchange={handleChange}  type="text" placeholder="Enter your Name" ></lightning-input>
+    </div>
+    <div class="slds-col slds-size_10-of-12">
+    <lightning-input varient="standard" name="email" label="email" onchange={handleChange}  type="text" placeholder="Enter your Email" ></lightning-input>
+    </div>
+    <div class="slds-col slds-size_10-of-12">
+    <lightning-input varient="standard" name="Password" label="Password" onchange={handleChange}  type="password" placeholder="Enter your password"></lightning-input>
+    </div>
+    <div class="slds-col slds-size_10-of-12" >
+        <lightning-button varient="success"  label="submit" onchange={handleClick}   placeholder="Submit"></lightning-button>
+        </div>
+    
+    <div class="modal"  if:true={showResult}>
+        <p>Enter Name is: {name}</p>
+        <p>Enter email is: {email}</p>
+        <p>Enter password is: {password}</p>
+    </div>
+    </div>
+    </div>
+</template>

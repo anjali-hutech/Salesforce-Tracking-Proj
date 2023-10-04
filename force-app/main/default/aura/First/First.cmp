@@ -1,0 +1,12 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	Hello
+    <aura:attribute name="status" type="String[]" default="Open, Closed, Closed Won, Any"/>
+    <ui:menu>
+        <ui:menuTriggerLink aura:id="trigger" label="Opportunity Status"/>
+        <ui:menuList class="actionMenu" aura:id="actionMenu">
+            <aura:iteration items="{!v.status}" var="s">
+                <ui:actionMenuItem label="{!s}" click="{!c.doSomething}"/>
+            </aura:iteration>
+        </ui:menuList>
+    </ui:menu>
+</aura:component>

@@ -1,0 +1,13 @@
+.THIS{
+    
+   background-color:#040744;
+   background-image: url('https://www.booknmeet.com/img/hero_home_bg_1.svg') ;
+    background-repeat:no-repeat;
+   background-position:bottom; 
+    padding:50px;
+    min-height:119vh;
+}
+.THIS ::placeholder {
+    color:#08399c;
+    content:'replacement string';
+}

@@ -1,0 +1,15 @@
+<template>
+		<div class="container">
+				<lightning-input type="text" variant="standard" class="slds-col slds-bottom_large"   label="Enter your Account Name"
+												 placeholder="type here... " onchange={handleSearch}  name="Name"></lightning-input>
+		
+    <template if:true={result} for:each={result} for:item="res">
+		<lightning-card key={res.Id} varient="Narrow" title={res.Name} icon-name="standard:account"></lightning-card>
+		</template>
+		</div>
+		<div color="cone">
+				<p>
+						hello world.
+				</p>
+		</div>
+      </template>

@@ -1,0 +1,24 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+     
+   <aura:attribute name="Acc" type="Account" default="{sobjecttype:'Account'}"></aura:attribute>
+    
+    <div class="slds-text-align_center  slds-text-heading_large ">
+        Create Account
+    </div>
+    <div class="slds-grid slds-wrap slds-p-around_medium">
+     <div class="slds-col slds-size_6-of-12 h1">
+       <lightning:input name="AccName" label="Account Name" value="{!v.Acc.Name}"> </lightning:input>    
+     </div>
+ 
+    <div class="slds-col slds-size_6-of-12">
+         <lightning:input name="AccPhone" label="Phone" value="{!v.Acc.Phone}"> </lightning:input>    
+    </div>
+    
+    <div class="slds-col slds-size_6-of-12">
+         <lightning:select name="AccActive" label="Active" required="true" value="{!v.Acc.Active_c}">
+             <option value="Yes">Yes</option>
+             <option value="No">No</option>
+         </lightning:select>
+    </div>
+  </div>
+</aura:component>
