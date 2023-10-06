@@ -1,5 +1,7 @@
 public class LeaveRequestSampleData {
-public static void createData(){
+    
+    
+ public static void createData(){
         Id currentUserId=UserInfo.getUserId();
         List<LeaveRequest__c> leaves=new List<LeaveRequest__c>();
         leaves.Add(new LeaveRequest__c(User__c=currentUserId,From_Date__c=Date.newInstance(2023, 03, 10),To_Date__c=Date.newInstance(2023, 03, 11),Reason__c='For personal reason',Status__c='Approved'));
@@ -9,4 +11,3 @@ public static void createData(){
         insert leaves;
     }
 }
-

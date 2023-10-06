@@ -1,0 +1,15 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="WholeNumber" type="integer" access="public" />
+    <aura:attribute name="Percentage" type="integer" access="public" />
+    
+    <div>
+    <lightning:input name="input1" type="number" label="Enter Your Number" value="{!v.WholeNumber}"></lightning:input>
+        <lightning:input name="input2" type="number" label="Enter Your Percentage" value="{!v.Percentage}" ></lightning:input>   
+    
+    <br/>
+    {!v.WholeNumber}<br/>
+    {!v.Percentage}
+        <br/>
+        {!v.Percentage} percent of {!v.WholeNumber} is  {!div(mult(v.WholeNumber,v.Percentage),100)}
+    </div>
+</aura:component>

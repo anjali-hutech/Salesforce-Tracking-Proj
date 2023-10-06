@@ -1,0 +1,11 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	
+<div class="slds-p-around_small">
+    <h1 class="black" style="color:blue"> I am in Lightning Components</h1>
+    <p class="blue">Lightning paragraphs</p>
+    <div class="White">Div Component</div>
+    <span>
+     Span Component
+    </span>
+    </div>
+</aura:component>
